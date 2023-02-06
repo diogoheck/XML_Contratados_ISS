@@ -9,27 +9,26 @@ from copia_xml_pastas.copiar_xml import navegar_pastas_xml_contratados as copiar
 import os
 
 
-
 if __name__ == '__main__':
 
     with open('R:\Compartilhado\Fiscal\lista_clientes_iss\senha.txt', 'r') as arquivo:
         credenciais = arquivo.readlines()
-    
+
     CPF = credenciais[0].replace('\n', '')
     SENHAS = credenciais[1].replace('\n', '').split()
     SENHAS = [int(senha) for senha in SENHAS]
 
-    dt_inicial = '01/12/2022'
-    dt_final = '31/12/2022'
+    dt_inicial = '01/01/2023'
+    dt_final = '31/01/2023'
     data_lista = dt_inicial.split('/')
     competencia = data_lista[1] + data_lista[2]
     # print(competencia)
     planilha = de.planilha()
     dic_empresas = de.criar_dicionario_empresas(planilha)
 
-    driver = acesso.criar_conexao(CPF, SENHAS)
+    # driver = acesso.criar_conexao(CPF, SENHAS)
 
-    ISS.exportar_empresas_xml(dt_inicial, dt_final, driver, dic_empresas)
+    # ISS.exportar_empresas_xml(dt_inicial, dt_final, driver, dic_empresas)
 
     # arq_xml.extrair_arquivos()
 

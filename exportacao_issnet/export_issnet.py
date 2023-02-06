@@ -47,12 +47,12 @@ def seleciona_menu(driver):
 
 def seleciona_menu_contratados_1(driver):
     driver.find_element(By.XPATH,
-        '//*[@id="Menu1_MenuPrincipal"]/ul/li[3]/div/span[3]').click()
+                        '//*[@id="Menu1_MenuPrincipal"]/ul/li[3]/div/span[3]').click()
 
 
 def seleciona_menu_contratados_2(driver):
     driver.find_element(By.XPATH,
-        '//*[@id="Menu1_MenuPrincipal"]/ul/li[2]/div/span[3]').click()
+                        '//*[@id="Menu1_MenuPrincipal"]/ul/li[2]/div/span[3]').click()
 
 
 def seleciona_servicos_contratados(driver, IE, empresa):
@@ -67,17 +67,17 @@ def seleciona_servicos_contratados(driver, IE, empresa):
 
 def consulta_menu_1(driver):
     driver.find_element(By.XPATH,
-        '//*[@id="Menu1_MenuPrincipal"]/ul/li[3]/ul/li[4]/div/a').click()
+                        '//*[@id="Menu1_MenuPrincipal"]/ul/li[3]/ul/li[4]/div/a').click()
 
 
 def consulta_menu_2(driver):
     driver.find_element(By.XPATH,
-        '//*[@id="Menu1_MenuPrincipal"]/ul/li[3]/ul/li[6]/div/a').click()
+                        '//*[@id="Menu1_MenuPrincipal"]/ul/li[3]/ul/li[6]/div/a').click()
 
 
 def consulta_menu_3(driver):
     driver.find_element(By.XPATH,
-        '//*[@id="Menu1_MenuPrincipal"]/ul/li[2]/ul/li[6]/div/a').click()
+                        '//*[@id="Menu1_MenuPrincipal"]/ul/li[2]/ul/li[6]/div/a').click()
 
 
 def consulta_de_notas_tomadas(driver, simples, empresa):
@@ -96,7 +96,7 @@ def consulta_de_notas_tomadas(driver, simples, empresa):
 # mudar_frame
 def switch_frame(driver):
     frame = driver.find_element(By.XPATH,
-        '//*[@id="iframe"]')
+                                '//*[@id="iframe"]')
 
     driver.switch_to.frame(frame)
 
@@ -109,7 +109,7 @@ def mudar_frame(driver):
 
 def switch_relatorio(driver):
     frame = driver.find_element(By.XPATH,
-        '//*[@id="viewer"]')
+                                '//*[@id="viewer"]')
     driver.switch_to.frame(frame)
 
 
@@ -149,7 +149,7 @@ def selecionar_filtros_adicionais(driver):
 
 def inserir_data_inicial(driver, dt_inicial):
     driver.find_element(By.XPATH,
-        '//*[@id="txtDtEmissaoIni"]').send_keys(dt_inicial)
+                        '//*[@id="txtDtEmissaoIni"]').send_keys(dt_inicial)
 
 
 def selecionar_data_inicial(driver, dt_inicial):
@@ -159,7 +159,7 @@ def selecionar_data_inicial(driver, dt_inicial):
 
 def inserir_data_final(driver, dt_final):
     driver.find_element(By.XPATH,
-        '//*[@id="txtDtEmissaoFim"]').send_keys(dt_final)
+                        '//*[@id="txtDtEmissaoFim"]').send_keys(dt_final)
 
 
 def selecionar_data_final(driver, dt_final):
@@ -170,7 +170,7 @@ def selecionar_data_final(driver, dt_final):
 
 def clicar_buscar_notas(driver):
     driver.find_element(By.XPATH,
-        '//*[@id="btnBuscarNotas"]/span').click()
+                        '//*[@id="btnBuscarNotas"]/span').click()
 
 
 def buscar_notas(driver):
@@ -180,7 +180,7 @@ def buscar_notas(driver):
 # exportar_notas_xml
 def clicar_exportar_xmls(driver):
     driver.find_element(By.ID,
-        "dgDocumentos__ctl2_btnExpTodos").click()
+                        "dgDocumentos__ctl2_btnExpTodos").click()
 
 
 def exportar_notas_xml(driver):
@@ -200,7 +200,7 @@ def exportar_notas_xml(driver):
 
 def clica_entrar_empresa(driver):
     driver.find_element(By.XPATH,
-        '//*[@id="lblNomeEmpresa"]').click()
+                        '//*[@id="lblNomeEmpresa"]').click()
 
 
 def trocar_empresa(driver):
@@ -211,7 +211,7 @@ def percorrer_menus_servicos_contratados_xml(driver, IE, dt_inicial,
                                              dt_final, simples,
                                              empresa):
     seleciona_empresa(driver, IE)
-    time.sleep(0.5)
+    time.sleep(2)
     seleciona_menu(driver)
     seleciona_servicos_contratados(driver, IE, empresa)
     consulta_de_notas_tomadas(driver, simples, empresa)

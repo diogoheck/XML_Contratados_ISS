@@ -2,7 +2,7 @@ import os
 import shutil
 from renomear.renomear_arquivos import renomear_arquivos
 from copiar_rede_relatorios.copiar_rede import criar_nova_pasta, existe_essa_pasta
-pasta = r'U:\ISS\xml_contratados'
+pasta = r'C:\ISS\xml_contratados'
 # C:\XML
 # Percorrer a pasta dos XMLs
 
@@ -26,10 +26,10 @@ def navegar_pastas_xml_contratados(dic_empresas):
                 cod_unico = dic_empresas.get(IM)[2]
                 empresa = dic_empresas.get(IM)[1]
                 nome_arquivo = f'{IM} {str(Nota)}.xml'
-                new = f'U:\\ISS\\xml_contratados\\{nome_arquivo}'
+                new = f'C:\\ISS\\xml_contratados\\{nome_arquivo}'
                 renomear_arquivos(old, new)
 
-                caminho = f'U:\\ISS\\xml_contratados\\{cod_unico}'
+                caminho = f'C:\\ISS\\xml_contratados\\{cod_unico}'
                 destino_arquivo = f'{caminho}\\{nome_arquivo}'
                 if not existe_essa_pasta(caminho):
                     criar_nova_pasta(caminho)

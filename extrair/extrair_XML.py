@@ -3,7 +3,7 @@ import glob
 import os
 import time
 
-PASTA_XML = r'U:\ISS\xml_contratados'
+PASTA_XML = r'C:\ISS\xml_contratados'
 # PASTA_XML = r'C:\xml'
 
 
