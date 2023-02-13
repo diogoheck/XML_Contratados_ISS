@@ -60,9 +60,6 @@ def clicar_msg_expiracao_senha(driver):
 
 def inserir_senha(driver, CPF, senhas):
 
-    # senhas = [3, 7, 0, 8, 7]
-    # CPF = '07478437087'
-
     lancamento_excecao(login_site, driver)
 
     driver.maximize_window()
