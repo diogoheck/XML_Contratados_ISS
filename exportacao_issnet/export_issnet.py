@@ -241,7 +241,8 @@ def exportar_empresas_xml(dt_inicial, dt_final, driver, dic_empresas):
                                                  dt_final, simples,
                                                  empresa)
 
-        # gerar segunda empresa em diante
+        # gerar segunda empresa em diante]
+        time.sleep(2)
         mudar_frame_principal(driver)
         trocar_empresa(driver)
     time.sleep(10)

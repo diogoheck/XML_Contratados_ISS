@@ -18,8 +18,8 @@ if __name__ == '__main__':
     SENHAS = credenciais[1].replace('\n', '').split()
     SENHAS = [int(senha) for senha in SENHAS]
 
-    dt_inicial = '01/01/2023'
-    dt_final = '31/01/2023'
+    dt_inicial = '01/02/2023'
+    dt_final = '28/02/2023'
     data_lista = dt_inicial.split('/')
     competencia = data_lista[1] + data_lista[2]
     # print(competencia)
@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     # arq_xml.remover_arquivos_zip()
 
-    # copiar_xmls_pastas(dic_empresas)
+    copiar_xmls_pastas(dic_empresas)
 
     print('gerado com sucesso!!!\o/\o/')
 
